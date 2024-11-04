@@ -42,12 +42,12 @@ void double_lock_unlock_twice_lock();
 
 // main 함수
 int main() {
-    pthread_mutex_init(&mutex, NULL);
+    
     int val = 7000000;
     cast_alters_value(val);
     NonInitializedLocalVariable();
     
-    pthread_mutex_destroy(&mutex);
+   
     return 0;
 }
 
