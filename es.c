@@ -55,13 +55,13 @@ void cast_alters_value(int num) {
     printf("short: %d\n", (short)(5 + num)); // cast_alters_value 유발 
 }
 
-//void misaligned_object() {
-//    char* p = malloc(10);
-//    if (!p) {
-//        return;
-//    }
-//    free(p + 1);
-//}
+void misaligned_object() {
+    char* p = malloc(10);
+    if (!p) {
+        return;
+    }
+    free(p + 1);
+}
 
 void buffer_over_under() {
 
