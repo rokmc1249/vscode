@@ -41,15 +41,15 @@ void concurrency_starve_blocking(pthread_mutex_t lock);
 void double_lock_unlock_twice_lock();
 
 // main 함수
-int main() {
-    
-    int val = 7000000;
-    cast_alters_value(val);
-    NonInitializedLocalVariable();
-    printf("젠kis");
-   
-    return 0;
-}
+//int main() {
+//    
+//    int val = 7000000;
+//    cast_alters_value(val);
+//    NonInitializedLocalVariable();
+//    printf("젠kis");
+//   
+//    return 0;
+//}
 
 void cast_alters_value(int num) {
     printf("short: %d\n", (short)(5 + num)); // cast_alters_value 유발 
@@ -75,6 +75,7 @@ void buffer_over_under() {
 
 void NonInitializedLocalVariable() {
     int uninitialized_var; // Non-Initialized Local Variable
+    int err = result + uninitialized_var;
     printf("Uninitialized variable: %d\n", uninitialized_var);
 
     // 다음 함수 호출
@@ -193,7 +194,7 @@ void concurrency_starve_blocking(pthread_mutex_t lock) {
 
 
     // sleep 함수는 작업 기간을 지연시키기에 사용 자제
-    sleep(5); // 임계 영역 차단 유발  
+    //sleep(5); // 임계 영역 차단 유발  
 
     pthread_mutex_unlock(&lock); // 해제
     double_lock_unlock_twice_lock();
