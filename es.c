@@ -128,9 +128,9 @@ void NonTerminationOfLoop() {
 
 void NonTerminationOfCall() {
     UnreachableCode(); // 비종료 호출
-    int* r_p;
+    //int* r_p;
     // 다음 함수 호출
-    r_p = DoubleFree();
+    //r_p = DoubleFree();
     free(r_p);
     
 }
@@ -208,7 +208,7 @@ void double_lock_unlock_twice_lock() {
 
     pthread_mutex_unlock(&L1);
     pthread_mutex_unlock(&L1); // 동일한 뮤텍스 중복 해제
-    DoubleFree();
+   // DoubleFree();
 }
 
 
@@ -231,33 +231,33 @@ int* memory_alloc() {
     return(return_p);
 }
 
-int* DoubleFree(){
-    int* px = malloc(sizeof(int));
-
-
-    int* py = memory_alloc();
-
-    int cd = 4;
-
-    if (px == NULL || py == NULL) {
-
-            if (px == NULL) { // px만 메모리 할당 안된 경우  
-                free(py);
-                return NULL;
-            }
-            else if (py == NULL) { // py만 메모리 할당 안된 경우  
-                free(px);
-                return NULL;
-            }
-            else { // 둘 다 할당 안된 경우  
-                return NULL;
-            }
-    }
-
-    *py *= cd;
-
-    free(px);
-
-    return(px);
-}
+//int* DoubleFree(){
+//    int* px = malloc(sizeof(int));
+//
+//
+//    int* py = memory_alloc();
+//
+//    int cd = 4;
+//
+//    if (px == NULL || py == NULL) {
+//
+//            if (px == NULL) { // px만 메모리 할당 안된 경우  
+//                free(py);
+//                return NULL;
+//            }
+//            else if (py == NULL) { // py만 메모리 할당 안된 경우  
+//                free(px);
+//                return NULL;
+//            }
+//            else { // 둘 다 할당 안된 경우  
+//                return NULL;
+//            }
+//    }
+//
+//    *py *= cd;
+//
+//    free(px);
+//
+//    return(px);
+//}
 
