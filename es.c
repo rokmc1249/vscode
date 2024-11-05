@@ -99,14 +99,14 @@ void OutOfBoundArrayIndex() {
     DivideByZero();
 }
 
-void DivideByZero() {
-    int divisor = 0;
-    int result = 10 / divisor; // Divide by zero
-    printf("Division Result: %d\n", result);
-
-    // 다음 함수 호출
-    SquareRootOfNegativeNumber();
-}
+//void DivideByZero() {
+//    int divisor = 0;
+//    int result = 10 / divisor; // Divide by zero
+//    printf("Division Result: %d\n", result);
+//
+//    // 다음 함수 호출
+//    SquareRootOfNegativeNumber();
+//}
 
 void SquareRootOfNegativeNumber() {
     
@@ -131,7 +131,7 @@ void NonTerminationOfCall() {
     //int* r_p;
     // 다음 함수 호출
     //r_p = DoubleFree();
-    free(r_p);
+    //free(r_p);
     
 }
 
