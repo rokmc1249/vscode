@@ -46,7 +46,7 @@ int main() {
     int val = 7000000;
     cast_alters_value(val);
     NonInitializedLocalVariable();
-    
+    printf("젠키스");
    
     return 0;
 }
