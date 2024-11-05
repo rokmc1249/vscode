@@ -129,7 +129,7 @@ void NonTerminationOfLoop() {
 void NonTerminationOfCall() {
     UnreachableCode(); // 비종료 호출
     int* r_p;
-     다음 함수 호출
+    // 다음 함수 호출
     r_p = DoubleFree();
     free(r_p);
     
