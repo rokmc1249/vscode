@@ -99,14 +99,14 @@ void OutOfBoundArrayIndex() {
     DivideByZero();
 }
 
-//void DivideByZero() {
+void DivideByZero() {
 //    int divisor = 0;
 //    int result = 10 / divisor; // Divide by zero
 //    printf("Division Result: %d\n", result);
 //
 //    // 다음 함수 호출
-//    SquareRootOfNegativeNumber();
-//}
+    SquareRootOfNegativeNumber();
+}
 
 void SquareRootOfNegativeNumber() {
     
