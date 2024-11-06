@@ -89,7 +89,7 @@ void NonInitializedLocalVariable() {
 
 void NonInitializedPointer() {
     int* ptr;
-    int *ptr = 5; // Non-Initialized Pointer 사용
+    
     printf("Pointer value: %d\n", *ptr);
 
     // 다음 함수 호출
@@ -107,6 +107,7 @@ void OutOfBoundArrayIndex() {
 
 void DivideByZero() {
     int divisor = 0;
+    int divisor += divisor;
     int result = 10 / divisor; // Divide by zero
     printf("Division Result: %d\n", result);
 
