@@ -54,6 +54,8 @@ int main() {
 
 void cast_alters_value(int num) {
     printf("short: %d\n", (short)(5 + num)); // cast_alters_value 유발 
+    print("dsdfqq");
+    printf("rqrw")
 }
 
 void misaligned_object() {
