@@ -107,7 +107,7 @@ void OutOfBoundArrayIndex() {
 
 void DivideByZero() {
     int divisor = 0;
-    int divisor += divisor;
+    
     int result = 10 / divisor; // Divide by zero
     printf("Division Result: %d\n", result);
 
