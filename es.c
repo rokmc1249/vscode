@@ -65,7 +65,7 @@ void misaligned_object() {
         return;
     }
     free(p + 1);
-    printf("rqrw")
+    
 }
 
 //void buffer_over_under() {
@@ -89,7 +89,7 @@ void NonInitializedLocalVariable() {
 
 void NonInitializedPointer() {
     int* ptr;
-    *ptr = 5; // Non-Initialized Pointer 사용
+    int *ptr = 5; // Non-Initialized Pointer 사용
     printf("Pointer value: %d\n", *ptr);
 
     // 다음 함수 호출
