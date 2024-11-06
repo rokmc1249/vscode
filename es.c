@@ -41,16 +41,16 @@ void concurrency_lock_unknown();
 void concurrency_starve_blocking(pthread_mutex_t lock);
 void double_lock_unlock_twice_lock();
 
- //main 함수
-//int main() {
-//    
-//    int val = 7000000;
-//    cast_alters_value(val);
-//    NonInitializedLocalVariable();
-//    recursion(0);
-//   
-//    return 0;
-//}
+main 함수
+int main() {
+    
+    int val = 7000000;
+    cast_alters_value(val);
+    NonInitializedLocalVariable();
+    recursion(0);
+   
+    return 0;
+}
 
 void cast_alters_value(int num) {
     printf("short: %d\n", (short)(5 + num)); // cast_alters_value 유발 
