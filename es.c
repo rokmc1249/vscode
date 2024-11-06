@@ -80,13 +80,13 @@ void misaligned_object() {
 
 void NonInitializedLocalVariable() {
     int uninitialized_var; // Non-Initialized Local Variable
-    
+
     printf("Uninitialized variable: %d\n", uninitialized_var);
 
     // 다음 함수 호출
     NonInitializedPointer();
 
-
+}
 void NonInitializedPointer() {
     int* ptr;
     
@@ -245,8 +245,6 @@ void recursion(int a) {
 
 int* DoubleFree(){
     int* px = malloc(sizeof(int));
-
-
     int* py = memory_alloc();
 
     int cd = 4;
