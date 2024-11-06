@@ -41,7 +41,7 @@ void concurrency_lock_unknown();
 void concurrency_starve_blocking(pthread_mutex_t lock);
 void double_lock_unlock_twice_lock();
 
-main 함수
+//main 함수
 int main() {
     
     int val = 7000000;
