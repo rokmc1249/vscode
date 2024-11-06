@@ -39,7 +39,7 @@ void cast_alters_value(int num);
 void missing_lock_acquisition();
 void concurrency_lock_unknown();
 void concurrency_starve_blocking(pthread_mutex_t lock);
-void buffer_over_under();
+//void buffer_over_under();
 void double_lock_unlock_twice_lock();
 
 //main 함수
@@ -67,15 +67,15 @@ void misaligned_object() {
     free(p + 1);
 }
 
-void buffer_over_under() {
-
-    char* arr[4];
-
-    for (int i = 0; i <= 5; i++) { // 버퍼 언더 오버런 유발
-        arr[i] = i + 1;
-    }
-
-}
+//void buffer_over_under() {
+//
+//    char* arr[4];
+//
+//    for (int i = 0; i <= 5; i++) { // 버퍼 언더 오버런 유발
+//        arr[i] = i + 1;
+//    }
+//
+//}
 
 void NonInitializedLocalVariable() {
     int uninitialized_var; // Non-Initialized Local Variable
