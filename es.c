@@ -85,7 +85,7 @@ void NonInitializedLocalVariable() {
 
     // 다음 함수 호출
     NonInitializedPointer();
-}
+
 
 void NonInitializedPointer() {
     int* ptr;
