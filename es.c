@@ -54,7 +54,7 @@ int main() {
 
 void cast_alters_value(int num) {
     printf("short: %d\n", (short)(5 + num)); // cast_alters_value 유발 
-    printf("rqrwseq")
+    
     printf("rqrw")
 }
 
@@ -71,7 +71,7 @@ void buffer_over_under() {
     char* arr[4];
 
     for (int i = 0; i <= 5; i++) { // 버퍼 언더 오버런 유발
-        arr[i - 1] = i + 1;
+        arr[i] = i + 1;
     }
 
 }
