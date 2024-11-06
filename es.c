@@ -39,6 +39,7 @@ void cast_alters_value(int num);
 void missing_lock_acquisition();
 void concurrency_lock_unknown();
 void concurrency_starve_blocking(pthread_mutex_t lock);
+void buffer_over_under();
 void double_lock_unlock_twice_lock();
 
 //main 함수
