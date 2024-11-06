@@ -76,7 +76,7 @@ void buffer_over_under() {
 
 void NonInitializedLocalVariable() {
     int uninitialized_var; // Non-Initialized Local Variable
-    int err = result + uninitialized_var;
+    
     printf("Uninitialized variable: %d\n", uninitialized_var);
 
     // 다음 함수 호출
