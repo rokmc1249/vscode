@@ -33,6 +33,7 @@ void IllegalMemoryAccess();
 void ImproperSynchronizationToSharedResource();
 void Deadlock();
 int* memory_alloc();
+void recursion(int a);
 void misaligned_object();
 void cast_alters_value(int num);
 void missing_lock_acquisition();
@@ -46,7 +47,7 @@ int main() {
     int val = 7000000;
     cast_alters_value(val);
     NonInitializedLocalVariable();
-    printf("젠kis");
+    recursion(0);
    
     return 0;
 }
@@ -230,6 +231,11 @@ int* memory_alloc() {
     *return_p = 13;
     printf("return_p: %p, %d\n", return_p, *return_p);
     return(return_p);
+}
+void recursion(int a) {
+    while (a+1) {
+        recursion(a);
+    }
 }
 
 int* DoubleFree(){
